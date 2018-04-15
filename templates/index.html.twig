@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h2>Users fruits list</h2>
+
+    <table>
+        <thead>
+        <tr>
+            <th>User</th>
+            <th></th>
+            <th>Fruits</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for l in list %}
+            <tr>
+                <td>{{ l.user }}</td>
+                <td>-</td>
+                <td>{{ l.fruit }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
